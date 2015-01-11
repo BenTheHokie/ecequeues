@@ -1,12 +1,14 @@
 #!/usr/bin/env python
+
 import sys
+sys.path.append('/home/bwengert/lib')
+
 from parse import parse
 from threading import Timer
 from hashlib import md5
 from time import strftime
 from sanitize import scrubhtml
 
-sys.path.append('/home/bwengert/lib')
 
 def hash_it(s):
     m = md5()
