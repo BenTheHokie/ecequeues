@@ -1,0 +1,45 @@
+		    <!-- STOP ENTERING DATA -->
+		</tbody>
+	    </table>
+            <div class="container-fluid whitetxt frmhidden">
+                <form action="submit.cgi" onsubmit="return queue.validate()" method="POST" class="form-horizontal" role="form">
+                    <div class="row phoneform">
+                        <div class="form-group">
+                            <label Class="control-label col-xs-2" for="phone">Phone Number:</label>
+                            <div class="col-xs-6">
+                                <input type="tel" class="form-control" name="phone" placeholder="No spaces or punctuation. Only numbers.">
+                            </div>
+                            <div class="col-xs-4">
+                                <select name="carrier" class="form-control">
+                                    <option value="none">Select Carrier <span class="caret"></span></option>
+                                    <option value="v">Verizon</option>
+                                    <option value="a">AT&amp;T</option>
+                                    <option value="s">Sprint</option>
+                                    <option value="t">T-mobile</option>
+                                    <option value="vm">Virgin Mobile</option>
+                                </select>
+                            </div>
+                            <input type="hidden" name="hash" id="frmhash" value="none">
+                        </div>
+                    <!--</div>
+                    <div class="row phoneform">-->
+                        
+                        <div class="col-xs-12" style="padding:0cm;">
+                            <div class="btn-group pull-right">
+                                <a href="#" type="button" class="btn btn-default">Cancel</a>
+                                <input type="submit" value="Submit" class="btn btn-primary">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+	</div>
+	<div class="col-xs-0 col-md-2"></div>
+    </div></div>
+<script src="../js/qtables.js"></script>
+<!-- <script>
+$(".phoneform").show();
+</script> -->
+</body>
+
+</html>

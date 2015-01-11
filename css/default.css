@@ -1,0 +1,70 @@
+body {
+    background-image: url("bg1.png");
+    color: #777;
+}
+a {
+    transition: 0.3s;
+}
+
+.btn {
+    transition: 0.3s;
+}
+
+.subtitle a:link {
+    color: #999;
+    text-decoration: none;
+}
+
+.subtitle a:visited {
+    color: #999;
+    text-decoration: none;
+}
+
+.subtitle a:active {
+    color: #777;
+    text-decoration: none;
+}
+
+.subtitle a:hover {
+    color: #bbb;
+    text-decoration: none;
+}
+
+h1 {
+    color: #777;
+}
+
+.mainbox {
+    background-color: #eee;
+    text-align: center;
+    border: 10px solid #fff;
+    border-radius: 20px;
+    box-shadow: 10px 10px 60px -15px rgba(0,0,0,0.75), inset 1px 1px 10px rgba(0,0,0,0.20);
+    margin-top: 5em;
+    padding: 0.5cm;
+}
+
+.bodybox {
+    padding: 1em 1cm;
+    margin-bottom: 1cm;
+}
+
+.wip {
+    opacity: 0.5;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+
+.btn-xlarge {
+    /*padding: 18px 28px;*/
+    font-size: 200%;
+    line-height: normal;
+    border-radius: 8px;
+    height: 4em;
+    color: #555;
+}
