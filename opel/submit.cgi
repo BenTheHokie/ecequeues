@@ -16,7 +16,7 @@ try:
     number = form['phone'].value
     hashed = form['hash'].value
     carrier = form['carrier'].value
-    if int(number)!=float(number) or carrier not in ['v','a','s','t','vm'] or not re.match('^h[a-z|0-9]{10}$',hashed):
+    if int(number) != float(number) or carrier not in ['v','a','s','t','vm'] or not re.match('^h[a-z|0-9]{10}$',hashed):
         raise
 except:
     f = open('pissoff.html')
