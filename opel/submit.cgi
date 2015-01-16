@@ -9,13 +9,13 @@ form = cgi.FieldStorage()
 
 print "Content-Type: text/html\r\n\r\n"
 
-#print "<html><body>"
-#print "<h2>Hello?</h2>"
-#print "</body></html>\r\n\r\n"
 try:
     number = form['phone'].value
     hashed = form['hash'].value
     carrier = form['carrier'].value
+    if not any((number, hashed, carrier)):
+	print "<html><head>\r\nThere's nothing here.\r\n</html></head>\r\n\r\n"
+	sys.exit(0)
     if int(number) != float(number) or carrier not in ['v','a','s','t','vm'] or not re.match('^h[a-z|0-9]{10}$',hashed):
         raise
 except:
