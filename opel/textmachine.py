@@ -1,3 +1,7 @@
+import sys
+from getpass import getuser
+sys.path.append('/home/%s/lib' % getuser())
+
 from threading import Thread
 from smtplib import SMTP as smtp
 import sqlite3
@@ -10,9 +14,9 @@ email = emaillogin()
 class texter:
     def __init__(self, 
 		db, 
-		msgs = [    u'{qname} {currtime}\r\n{name} has moved from position {frm} to {to}. Elapsed: {elapsed}', 
-			    u"{qname} {currtime}\r\n{name} has been removed from the queue. Elapsed {elapsed}",
-			    u'{qname} {currtime}\r\n{name} is in position {pos}. Elasped {elapsed}'
+		msgs = [    u'{qname} {currtime}:\r\n{name} has moved from position {frm} to {to}. Elapsed: {elapsed}', 
+			    u"{qname} {currtime}:\r\n{name} has been removed from the queue. Elapsed {elapsed}",
+			    u'{qname} {currtime}:\r\n{name} is in position {pos}. Elasped {elapsed}'
 		       ]
 	    ):
 	
