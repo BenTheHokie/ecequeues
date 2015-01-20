@@ -3,8 +3,8 @@ from bs4 import BeautifulSoup
 
 def parse(localpage = None): #We can use local storage as an input, just provide the directory
     if localpage:
-        f=open('page.htm','r') #if we want to use the local page, just pull it from the directory
-        pgsrc=f.read()
+        f = open('page.htm','r') #if we want to use the local page, just pull it from the directory
+        pgsrc = f.read()
         f.close()
         
     else:
@@ -17,13 +17,14 @@ def parse(localpage = None): #We can use local storage as an input, just provide
         
         pgsrc = response.read()
     
-    soup=BeautifulSoup(pgsrc)
+    soup = BeautifulSoup(pgsrc)
     bigqsrc = soup.find_all('table')[3].find_all('tr')
-    bigqsrc=bigqsrc[1:] #cut out the table headers (they mess with the data)
+    # @param bigqsrc: the html source (parsed by bs4) of the entire queue
+    bigqsrc = bigqsrc[1:] #cut out the table headers (they mess with the data)
     
     bigq=[]
     for person in bigqsrc:
-        dlist=person.find_all('td') 
-        bigq+=[data2dict(dlist)]
+        dlist = person.find_all('td') 
+        bigq += [data2dict(dlist)]
 
     return bigq
