@@ -1,0 +1,8 @@
+*.pyc
+opel/bs4
+cel/bs4
+js/bootstrap-switch.min.js
+css/bootstrap-switch.min.css
+opel/emaillogin.py
+opel/index.html
+cel/index.html
