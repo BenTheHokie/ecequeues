@@ -1,4 +1,5 @@
 *.pyc
+*.swp
 opel/bs4
 cel/bs4
 js/bootstrap-switch.min.js
